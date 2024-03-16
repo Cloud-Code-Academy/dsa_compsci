@@ -11,8 +11,17 @@ public with sharing class StringChallenges {
      * @return the string in upper case
      */
     public static String toUpper(String str) {
-        //TODO: Implement
-        throw new StringChallengesException('Not Implemented');
+        List<Integer> chars = new List<Integer>();
+        Integer length = str.length();
+        for (Integer i = 0; i < length; i++) {
+            Integer charCode = str.charAt(i);
+            if (charCode >= 97 && charCode <= 122) {
+                chars.add(charCode - 32);
+            } else {
+                chars.add(charCode);
+            }
+        }
+        return String.fromCharArray(chars);
     }
 
     /**
@@ -23,7 +32,17 @@ public with sharing class StringChallenges {
      */
     public static String toLower(String str) {
         //TODO: Implement
-        throw new StringChallengesException('Not Implemented');
+        List<Integer> chars = new List<Integer>();
+        Integer length = str.length();
+        for (Integer i = 0; i < length; i++) {
+            Integer charCode = str.charAt(i);
+            if (charCode >= 65 && charCode <= 90) {
+                chars.add(charCode + 32);
+            } else {
+                chars.add(charCode);
+            }
+        }
+        return String.fromCharArray(chars);
     }
 
 }
