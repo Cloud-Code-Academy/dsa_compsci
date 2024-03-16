@@ -17,7 +17,7 @@ private class StringChallengesTest {
         //then
         Assert.isTrue('HELLO'  == result, 'Expected HELLO');
         Assert.isTrue('HELLO'  == result2, 'Expected HELLO');
-        Assert.isTrue('22HELLO!!'  == result3, 'Expected HELLO!!');
+        Assert.isTrue('22HELLO!!'  == result3, 'Expected 22HELLO!!');
     }
 
     @IsTest
@@ -33,6 +33,6 @@ private class StringChallengesTest {
         //then
         Assert.isTrue('hello'  == result, 'Expected hello');
         Assert.isTrue('hello'  == result2, 'Expected hello');
-        Assert.isTrue('22hello!!'  == result3, 'Expected hello!!');
+        Assert.isTrue('22hello!!'  == result3, 'Expected 22hello!!');
     }
 }
