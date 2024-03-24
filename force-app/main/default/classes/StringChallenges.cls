@@ -11,17 +11,8 @@ public with sharing class StringChallenges {
      * @return the string in upper case
      */
     public static String toUpper(String str) {
-        List<Integer> chars = new List<Integer>();
-        Integer length = str.length();
-        for (Integer i = 0; i < length; i++) {
-            Integer charCode = str.charAt(i);
-            if (charCode >= 97 && charCode <= 122) {
-                chars.add(charCode - 32);
-            } else {
-                chars.add(charCode);
-            }
-        }
-        return String.fromCharArray(chars);
+        //TODO: Implement
+        throw new StringChallengesException('Not Implemented');
     }
 
     /**
@@ -32,57 +23,7 @@ public with sharing class StringChallenges {
      */
     public static String toLower(String str) {
         //TODO: Implement
-        List<Integer> chars = new List<Integer>();
-        Integer length = str.length();
-        for (Integer i = 0; i < length; i++) {
-            Integer charCode = str.charAt(i);
-            if (charCode >= 65 && charCode <= 90) {
-                chars.add(charCode + 32);
-            } else {
-                chars.add(charCode);
-            }
-        }
-        return String.fromCharArray(chars);
-    }
-
-    public static String toLowerWithMap(String str){
-        Map<String, String> lowerCaseCharByUpper = new Map<String, String>{
-            'A' => 'a',
-            'B' => 'b',
-            'C' => 'c',
-            'D' => 'd',
-            'E' => 'e',
-            'F' => 'f',
-            'G' => 'g',
-            'H' => 'h',
-            'I' => 'i',
-            'J' => 'j',
-            'K' => 'k',
-            'L' => 'l',
-            'M' => 'm',
-            'N' => 'n',
-            'O' => 'o',
-            'P' => 'p',
-            'Q' => 'q',
-            'R' => 'r',
-            'S' => 's',
-            'T' => 't',
-            'U' => 'u',
-            'V' => 'v',
-            'W' => 'w',
-            'X' => 'x',
-            'Y' => 'y',
-            'Z' => 'z'
-        };
-        List<String> chars = str.split('');
-        Integer size = chars.size();
-        for (Integer i = 0; i < size ; i++) {
-           if(lowerCaseCharByUpper.containsKey(chars[i])){
-               chars[i] = lowerCaseCharByUpper.get(chars[i]);
-           }
-
-        }
-        return String.join(chars, '');
+        throw new StringChallengesException('Not Implemented');
     }
 
 }
