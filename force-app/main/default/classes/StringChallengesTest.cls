@@ -50,4 +50,14 @@ private class StringChallengesTest {
         Assert.isTrue('hello'  == result2, 'Expected hello');
         Assert.isTrue('22hello!!'  == result3, 'Expected hello!!');
     }
+
+    @IsTest
+    static void toLowerWithCustomIterable(){
+        //given
+        String source = 'HeLLo!! WoRlD';
+        //when
+        String result = StringChallenges.toLowerWithCustomIterable(source);
+        //then
+        Assert.isTrue(result == 'hello!! world');
+    }
 }
