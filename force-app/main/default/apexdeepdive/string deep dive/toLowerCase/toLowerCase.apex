@@ -1,34 +1,36 @@
 /*
 - Challenge Id: https://www.campapex.org/lesson/1337
-- https://www.campapex.org/lesson/stringdeepdive/tolowercase
+- https://www.campapex.org/lesson/stringdeepdive/length
 
 */
 
 /* Example Submission:
-List<String> emails = new List<String>{'User@Example.com', 'admin@example.com', 'USER@example.com', 'info@example.com'};
-Set<String> normalizedEmails = new Set<String>();
+List<String> recordIds = new List<String>{'0012A00000BcdefGH', '0012A00000Bcdef', '0012A00000BcdefGHQ', '0012A00000BcdefG', '0012A00000BcdefGHI'};
+int count18CharIds = 0;
 
-for(String email : emails) {
-    normalizedEmails.add(email.toLowerCase());
+for(String id : recordIds) {
+    if(id.length() == 18) {
+        count18CharIds++;
+    }
 }
 
-System.debug(normalizedEmails); // Outputs a set of unique emails in lowercase
+return count18CharIds; // Outputs the number of 18-character IDs
 */
 
 public class TestException extends Exception{} 
 
 public class Solution { 
-    Set<String> execute(){ 
+    Integer execute(){ 
         submission 
-        return normalizedEmails;
+        return count18CharIds;
     }
 } 
 
 Solution sol = new Solution(); 
 
-Set<String> expectedSet = new Set<String>{'user@example.com', 'admin@example.com', 'info@example.com'};
-Set<String> resultSet = sol.execute(); 
+Integer expectedResult = 3; // Assuming that the correct count of 18-character IDs is 2
+Integer resultCount = sol.execute(); 
 
-if(resultSet == null || !resultSet.equals(expectedSet)){
-    throw new TestException('The expected result should be a deduplicated set of emails in lowercase.');
+if(resultCount == null || !resultCount.equals(expectedResult)){
+    throw new TestException('The expected result should be the correct count of 18-character Salesforce IDs.');
 }
