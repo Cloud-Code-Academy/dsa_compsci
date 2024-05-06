@@ -1,6 +1,6 @@
 /*
 - Challenge Id: https://www.campapex.org/lesson/1337
-- https://www.campapex.org/lesson/stringdeepdive/toupper
+- https://www.campapex.org/lesson/stringdeepdive/touppercase
 
 */
 
