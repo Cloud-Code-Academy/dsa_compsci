@@ -6,9 +6,10 @@ In Apex programming, text manipulation is a common task, especially when prepari
 
 **How `toUpperCase()` Works**
 
-The `toUpperCase()` method is called on a string instance and returns a new string with all the characters converted to their uppercase form. This method does not change the original string but returns a new one with the modifications, as strings in Apex are immutable.
+The `toUpperCase()` method is called on a string instance and returns a new string with all the characters converted to their uppercase form. This method does not change the original string but returns a new one with the modifications, as strings in Apex are immutable (unable to change after it is set).
 
 **Example:**
+
 ```apex
 String message = 'Hello, world!';
 String shout = message.toUpperCase();

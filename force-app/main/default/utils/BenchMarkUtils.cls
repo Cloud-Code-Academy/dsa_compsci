@@ -10,7 +10,6 @@ public with sharing class BenchMarkUtils {
     private static Decimal cpuEnd;
     private static Decimal timeEnd;
 
-
     public static void benchmarkStart() {
         heapStart = Limits.getHeapSize();
         cpuStart = Limits.getCpuTime();
@@ -35,7 +34,7 @@ public with sharing class BenchMarkUtils {
         System.debug('Time Used: ' + (timeEnd - timeStart));
     }
 
-    public static void logResults(Integer iterations){
+    public static void logResults(Integer iterations) {
         System.debug('Heap Start: ' + heapStart);
         System.debug('Heap End: ' + heapEnd);
         System.debug('Heap Used: ' + (heapEnd - heapStart));
@@ -46,9 +45,14 @@ public with sharing class BenchMarkUtils {
         System.debug('Time End: ' + timeEnd);
         System.debug('Time Used: ' + (timeEnd - timeStart));
         System.debug('Iterations: ' + iterations);
-        System.debug('Average Time Per Iteration: ' + (timeEnd - timeStart) / iterations);
-        System.debug('Average CPU Per Iteration: ' + (cpuEnd - cpuStart) / iterations);
-        System.debug('Average Heap Per Iteration: ' + (heapEnd - heapStart) / iterations);
-
+        System.debug(
+            'Average Time Per Iteration: ' + (timeEnd - timeStart) / iterations
+        );
+        System.debug(
+            'Average CPU Per Iteration: ' + (cpuEnd - cpuStart) / iterations
+        );
+        System.debug(
+            'Average Heap Per Iteration: ' + (heapEnd - heapStart) / iterations
+        );
     }
 }

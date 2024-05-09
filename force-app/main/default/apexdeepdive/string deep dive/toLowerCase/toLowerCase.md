@@ -6,9 +6,10 @@ Text manipulation is a frequent necessity in Apex programming, particularly when
 
 **How `toLowerCase()` Works**
 
-The `toLowerCase()` method is invoked on a string instance and returns a new string with all characters converted to lowercase. It does not modify the original string; instead, it creates a new one, as strings in Apex are immutable.
+The `toLowerCase()` method is invoked on a string instance and returns a new string with all characters converted to lowercase. It does not modify the original string; instead, it creates a new one, as strings in Apex are immutable (unable to change after it is set).
 
 **Example:**
+
 ```apex
 String greeting = 'Hello, World!';
 String whisper = greeting.toLowerCase();

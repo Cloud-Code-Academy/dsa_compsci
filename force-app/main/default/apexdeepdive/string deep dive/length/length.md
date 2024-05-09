@@ -9,6 +9,7 @@ Handling string data effectively is crucial in Apex programming, especially when
 The `length()` method is called on a string instance and returns the number of characters in the string. This method is straightforward as it simply counts and returns the length of the string without modifying the original string, adhering to the immutability of strings in Apex.
 
 **Example:**
+
 ```apex
 String message = 'Hello, Salesforce!';
 Integer messageLength = message.length();

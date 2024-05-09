@@ -15,9 +15,9 @@ private class StringChallengesTest {
         String result2 = StringChallenges.toUpper(input2);
         String result3 = StringChallenges.toUpper(input3);
         //then
-        Assert.isTrue('HELLO'  == result, 'Expected HELLO');
-        Assert.isTrue('HELLO'  == result2, 'Expected HELLO');
-        Assert.isTrue('22HELLO!!'  == result3, 'Expected 22HELLO!!');
+        Assert.isTrue('HELLO' == result, 'Expected HELLO');
+        Assert.isTrue('HELLO' == result2, 'Expected HELLO');
+        Assert.isTrue('22HELLO!!' == result3, 'Expected 22HELLO!!');
     }
 
     @IsTest
@@ -31,8 +31,8 @@ private class StringChallengesTest {
         String result2 = StringChallenges.toLower(input2);
         String result3 = StringChallenges.toLower(input3);
         //then
-        Assert.isTrue('hello'  == result, 'Expected hello');
-        Assert.isTrue('hello'  == result2, 'Expected hello');
-        Assert.isTrue('22hello!!'  == result3, 'Expected 22hello!!');
+        Assert.isTrue('hello' == result, 'Expected hello');
+        Assert.isTrue('hello' == result2, 'Expected hello');
+        Assert.isTrue('22hello!!' == result3, 'Expected 22hello!!');
     }
 }
