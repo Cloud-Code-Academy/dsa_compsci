@@ -1,4 +1,4 @@
-public with sharing class ToLowerCaseTemplate {
+public with sharing class ToUpperCaseTest {
     public class TestException extends Exception {
     }
     public class TestResultException extends Exception {
@@ -28,29 +28,18 @@ public with sharing class ToLowerCaseTemplate {
         }
 
         public TestResult test1(String testNum) {
-            List<String> emailsInput = new List<String>{
-                'test@email.com',
-                'WarRen@cloudcodeacademy.COM',
-                'maRc@SaleFORCE.com'
-            };
-            String testDesc = TestUtils.formatEmailList(emailsInput);
+            String input = 'Developer';
+            String solution = 'DEVELOPER';
+            String testDesc = input;
 
-            List<String> emailsSolution = new List<String>{
-                'test@email.com',
-                'warreb@cloudcodeacademy.com',
-                'marc@salesforce.com'
-            };
             String msg;
 
             try {
-                List<String> result = tlcs.standardizeEmails(emailsInput);
+                String result = new ToUpperCaseSolution()
+                    .convertToUpperCase(input);
 
-                if (result != emailsSolution) {
-                    msg =
-                        'Expected ' +
-                        emailsSolution +
-                        ', received: ' +
-                        result;
+                if (result != solution) {
+                    msg = 'Expected ' + solution + ', received: ' + result;
                 }
                 return new TestResult(testNum, testDesc, msg == null, msg);
             } catch (Exception e) {
@@ -59,29 +48,19 @@ public with sharing class ToLowerCaseTemplate {
         }
 
         public TestResult test2(String testNum) {
-            List<String> emailsInput = new List<String>{
-                null,
-                'Another@emaiL.CoM',
-                '123Test@TeStER.com'
-            };
-            String testDesc = TestUtils.formatEmailList(emailsInput);
-            List<String> emailsSolution = new List<String>{
-                null,
-                'another@email.com',
-                '123test@tester.com'
-            };
+            String input = 'Software eng';
+            String solution = 'SOFTWARE ENG';
+            String testDesc = input;
+
             String msg;
 
             try {
-                List<String> result = tlcs.standardizeEmails(emailsInput);
-                if (result != emailsSolution) {
-                    msg =
-                        'Expected ' +
-                        emailsSolution +
-                        ', received: ' +
-                        result;
-                }
+                String result = new ToUpperCaseSolution()
+                    .convertToUpperCase(input);
 
+                if (result != solution) {
+                    msg = 'Expected ' + solution + ', received: ' + result;
+                }
                 return new TestResult(testNum, testDesc, msg == null, msg);
             } catch (Exception e) {
                 return new TestResult(testNum, testDesc, false, e.getMessage());

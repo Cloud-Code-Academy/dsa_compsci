@@ -38,8 +38,7 @@ public with sharing class LengthTest {
                         '0012A00000BcdefGHQ'
                     }
                 );
-                // StringUtils su = new StringUtils();
-                // Integer result = su.count18CharacterStrings(new List<String>{'0012A00000BcdefGH', '0012A00000Bcdef', '0012A00000BcdefGHQ'});
+
                 if (result != 2) {
                     msg = 'Expected 2, received: ' + result;
                 }
