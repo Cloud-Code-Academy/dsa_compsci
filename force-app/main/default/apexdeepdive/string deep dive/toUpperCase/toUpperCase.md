@@ -34,7 +34,7 @@ System.debug('Matching Contacts: ' + results.size());
 
 ### Challenge: Using `toUpperCase()` for Data Consistency
 
-Imagine you are developing a part of a Salesforce application that handles user input for a job application form. The application responses are stored in a custom object, and one of the fields captures the job title of the applicant. To maintain consistency in the database, all job titles need to be stored in uppercase.
+You are developing a part of a Salesforce application that handles user input for a job application form. The application responses are stored in a custom object, and one of the fields captures the job title of the applicant. To maintain consistency in the database, all job titles need to be stored in uppercase.
 
 **Your task:**
 Write code that processes a job title string entered by a user, converts it to uppercase using the `toUpperCase()` method, and stores the result in a variable. You will start with a predefined job title string and need to implement the conversion logic.
