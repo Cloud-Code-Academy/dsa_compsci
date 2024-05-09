@@ -10,21 +10,23 @@ The `toUpperCase()` method is called on a string instance and returns a new stri
 
 **Example:**
 ```apex
-String message = "Hello, world!";
+String message = 'Hello, world!';
 String shout = message.toUpperCase();
-System.debug(shout); // Outputs: "HELLO, WORLD!"
+System.debug(shout); // Outputs: 'HELLO, WORLD!'
 ```
 
 In this example, `toUpperCase()` converts every lowercase letter in `message` to its uppercase counterpart, and the result is stored in `shout`.
 
 **Practical Use Case**
 
-Consider a scenario in Salesforce where you need to ensure that all email addresses stored in the database are in a standard format. Since email addresses are case-insensitive, converting them to uppercase before storing or comparing them can help maintain consistency.
+Consider a scenario in Salesforce where you are implementing a search feature that allows users to find records based on names, addresses, or other textual attributes. Due to variations in how users may enter these details (e.g., entering "smith", "Smith", "SMITH"), search results can vary widely. To ensure that searches yield consistent and comprehensive results, converting all input data and comparison fields to uppercase before performing queries can be very effective. This method ensures that the search functionality is robust and reliable, regardless of how the search terms are entered.
 
 ```apex
-String email = "contact@example.com";
-String formattedEmail = email.toUpperCase();
-System.debug(formattedEmail); // Outputs: "CONTACT@EXAMPLE.COM"
+String userInput = 'smith';
+String searchQuery = userInput.toUpperCase(); // Convert to uppercase
+
+List<Contact> results = [SELECT Id, FirstName, LastName FROM Contact WHERE LastName = :searchQuery];
+System.debug('Matching Contacts: ' + results.size());
 ```
 
 ### Challenge: Using `toUpperCase()`

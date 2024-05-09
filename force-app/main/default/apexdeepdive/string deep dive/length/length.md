@@ -10,8 +10,8 @@ The `length()` method is called on a string instance and returns the number of c
 
 **Example:**
 ```apex
-String message = "Hello, Salesforce!";
-int messageLength = message.length();
+String message = 'Hello, Salesforce!';
+Integer messageLength = message.length();
 System.debug(messageLength); // Outputs: 17
 ```
 
@@ -22,7 +22,7 @@ In this example, `length()` calculates the number of characters in the `message`
 A common use case in Salesforce is to validate the length of certain fields to ensure they meet specific criteria, such as verifying the length of a Salesforce ID. Salesforce IDs can be either 15 or 18 characters long, with the 18-character version being case-insensitive and thus safer for certain operations that might alter text case.
 
 ```apex
-String recordId = "0012A00000Bcdef"; // A 15-character Salesforce ID
+String recordId = '0012A00000Bcdef'; // A 15-character Salesforce ID
 System.debug(recordId.length()); // Outputs: 15
 ```
 

@@ -10,9 +10,9 @@ The `toLowerCase()` method is invoked on a string instance and returns a new str
 
 **Example:**
 ```apex
-String greeting = "Hello, World!";
+String greeting = 'Hello, World!';
 String whisper = greeting.toLowerCase();
-System.debug(whisper); // Outputs: "hello, world!"
+System.debug(whisper); // Outputs: 'hello, world!'
 ```
 
 Here, `toLowerCase()` transforms each uppercase letter in `greeting` into its lowercase form, storing the result in `whisper`.
@@ -22,14 +22,14 @@ Here, `toLowerCase()` transforms each uppercase letter in `greeting` into its lo
 A practical application in Salesforce could be during the processing of email addresses. Email addresses are inherently case-insensitive, and normalizing them to lowercase before storage or comparison can enhance data consistency and reliability.
 
 ```apex
-String email = "Contact@Example.COM";
+String email = 'Contact@Example.COM';
 String normalizedEmail = email.toLowerCase();
-System.debug(normalizedEmail); // Outputs: "contact@example.com"
+System.debug(normalizedEmail); // Outputs: 'contact@example.com'
 ```
 
 ### Challenge: Using `toLowerCase()` for Email Deduplication
 
-Suppose you are tasked with cleaning up a list of email addresses in a Salesforce application. Due to various input methods and user errors, the list might contain duplicate emails with different case formats. Using `toLowerCase()`, you can standardize all email addresses to lowercase to help identify and remove duplicates.
+You are tasked with cleaning up a list of email addresses in a Salesforce application. Due to various input methods and user errors, the list might contain duplicate emails with different case formats. Using `toLowerCase()`, you can standardize all email addresses to lowercase to help identify and remove duplicates.
 
 **Your task:**
 Write a piece of Apex code that processes a list of email strings, converts each to lowercase, and then deduplicates the list. You will start with a predefined list of emails that includes potential duplicates with varying cases.

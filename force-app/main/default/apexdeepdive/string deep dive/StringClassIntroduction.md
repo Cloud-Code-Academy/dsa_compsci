@@ -3,15 +3,15 @@
 **What is a String?**
 A String in Apex is a sequence of characters used to handle text. String variables are created by enclosing characters within double quotes (`""`). For example:
 ```apex
-String greeting = "Hello, World!";
+String greeting = 'Hello, World!';
 ```
 Strings can be empty (`""`) or contain spaces (`" "`), which may appear to be empty but are not.
 
 **Understanding the String Class**
 The String class in Apex is a built-in system class that provides a wealth of methods to manipulate and analyze text data. These methods can be called on any string instance using the dot (`.`) operator followed by the method name:
 ```apex
-String myString = "Salesforce";
-Boolean containsForce = myString.contains("force"); // returns true
+String myString = 'Salesforce';
+Boolean containsForce = myString.contains('force'); // returns true
 ```
 
 ### Commonly Used String Methods
@@ -40,9 +40,9 @@ In Salesforce, string manipulation becomes crucial when dealing with various fie
 **Example Use Case: Formatting Emails**
 Suppose you want to ensure all email addresses stored in Salesforce are in lowercase for standardization:
 ```apex
-String email = "Contact@Example.com";
+String email = 'Contact@Example.com';
 String formattedEmail = email.toLowerCase();
-System.debug(formattedEmail); // Outputs: "contact@example.com"
+System.debug(formattedEmail); // Outputs: 'contact@example.com'
 ```
 
 ### Conclusion
