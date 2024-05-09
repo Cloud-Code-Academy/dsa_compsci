@@ -33,7 +33,7 @@ public with sharing class ToLowerCaseTest {
                 'WarRen@cloudcodeacademy.COM',
                 'maRc@SaleFORCE.com'
             };
-            String testDesc = TestUtils.formatEmailList(emailsInput);
+            String testDesc = formatEmailList(emailsInput);
 
             List<String> emailsSolution = new List<String>{
                 'test@email.com',
@@ -64,7 +64,7 @@ public with sharing class ToLowerCaseTest {
                 'Another@emaiL.CoM',
                 '123Test@TeStER.com'
             };
-            String testDesc = TestUtils.formatEmailList(emailsInput);
+            String testDesc = formatEmailList(emailsInput);
             List<String> emailsSolution = new List<String>{
                 null,
                 'another@email.com',
@@ -93,5 +93,17 @@ public with sharing class ToLowerCaseTest {
         Solution sol = new Solution();
         TestResult[] testResult = sol.execute();
         throw new TestResultException(JSON.serialize(testResult));
+    }
+
+    public static String formatEmailList(List<String> emails) {
+        String result = '[';
+        for (Integer i = 0; i < emails.size(); i++) {
+            if (i > 0) {
+                result += ', ';
+            }
+            result += '\'' + emails[i] + '\'';
+        }
+        result += ']';
+        return result;
     }
 }
