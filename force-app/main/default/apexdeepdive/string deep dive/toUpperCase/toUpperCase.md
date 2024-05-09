@@ -30,9 +30,11 @@ List<Contact> results = [SELECT Id, FirstName, LastName FROM Contact WHERE LastN
 System.debug('Matching Contacts: ' + results.size());
 ```
 
-### Challenge: Using `toUpperCase()`
+---
+
+### Challenge: Using `toUpperCase()` for Data Consistency
 
 Imagine you are developing a part of a Salesforce application that handles user input for a job application form. The application responses are stored in a custom object, and one of the fields captures the job title of the applicant. To maintain consistency in the database, all job titles need to be stored in uppercase.
 
 **Your task:**
-Write a piece of Apex code that accepts a string input representing the job title and converts it to uppercase. Declare a variable `jobTitle` and initialize it with the value of a tech role you would like to have. Example: "software engineer", "Salesforce Developer", "Consultant". Convert `jobTitle` to uppercase and store the result in a new variable `formattedJobTitle`. Finally, return `formattedJobTitle`.
+Write code that processes a job title string entered by a user, converts it to uppercase using the `toUpperCase()` method, and stores the result in a variable. You will start with a predefined job title string and need to implement the conversion logic.

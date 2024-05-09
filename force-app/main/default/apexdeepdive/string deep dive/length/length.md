@@ -27,9 +27,10 @@ String recordId = '0012A00000Bcdef'; // A 15-character Salesforce ID
 System.debug(recordId.length()); // Outputs: 15
 ```
 
+---
 ### Challenge: Counting 18-Character Salesforce IDs
 
 In many Salesforce applications, it is important to differentiate between 15-character and 18-character IDs, especially when integrating with systems that require the case-insensitive version.
 
 **Your task:**
-Write a piece of Apex code that processes a list of Salesforce ID strings and counts how many of them are 18 characters long. You will start with a predefined list of IDs that includes both 15-character and 18-character IDs.
+Write code that processes a list of Salesforce ID strings and counts how many of them are 18 characters long. You will start with a predefined list of IDs that includes both 15-character and 18-character IDs.
