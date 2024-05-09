@@ -1,4 +1,4 @@
-public with sharing class lengthTemplate {
+public with sharing class LengthTemplate {
     public Integer count18CharacterStrings(String[] inputList) {
         final List<String> recordIds = new List<String>{
             '0012A00000BcdefGH',

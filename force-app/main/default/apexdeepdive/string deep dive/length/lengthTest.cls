@@ -1,4 +1,4 @@
-public with sharing class lengthTest {
+public with sharing class LengthTest {
     public class TestException extends Exception {
     }
     public class TestResultException extends Exception {
@@ -18,6 +18,7 @@ public with sharing class lengthTest {
     }
 
     public class Solution {
+        LengthSolution ls = new LengthSolution();
         TestResult[] execute() {
             TestResult[] results = new List<TestResult>{};
             results.add(test1('1'));
@@ -30,7 +31,6 @@ public with sharing class lengthTest {
             String msg;
 
             try {
-                lengthSolution ls = new lengthSolution();
                 Integer result = ls.count18CharacterStrings(
                     new List<String>{
                         '0012A00000BcdefGH',
@@ -54,7 +54,6 @@ public with sharing class lengthTest {
             String msg;
 
             try {
-                lengthSolution ls = new lengthSolution();
                 Integer result = ls.count18CharacterStrings(
                     new List<String>{
                         '0012A00000BcdefGH',
