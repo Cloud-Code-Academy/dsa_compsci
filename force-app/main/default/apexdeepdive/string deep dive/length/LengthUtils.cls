@@ -1,4 +1,4 @@
-public with sharing class LengthTemplate {
+public with sharing class LengthUtils {
     public Integer count18CharacterStrings(String[] inputList) {
         Integer count18CharIds = 0;
 
