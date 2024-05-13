@@ -1,4 +1,4 @@
-public with sharing class ToUpperCaseUtils {
+public class StringUtils {
     public String convertToUpperCase(String jobTitle) {
         return null;
     }
