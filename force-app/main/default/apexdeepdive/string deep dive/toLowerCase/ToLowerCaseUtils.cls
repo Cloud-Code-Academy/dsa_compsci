@@ -1,5 +1,5 @@
-public with sharing class ToLowerCaseUtils {
-    public List<String> standardizeEmails(List<String> emails) {
+public class ToLowerCaseUtils {
+    public Set<String> standardizeEmails(List<String> emails) {
         return null;
     }
 }
