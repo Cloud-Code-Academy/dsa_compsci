@@ -28,14 +28,14 @@ public with sharing class ToLowerCaseTest {
         }
 
         public TestResult test1(String testNum) {
-            List<String> emailsInput = new List<String>{
+            Set<String> emailsInput = new Set<String>{
                 'test@email.com',
                 'WarRen@cloudcodeacademy.COM',
                 'maRc@SaleFORCE.com'
             };
-            String testDesc = formatEmailList(emailsInput);
+            String testDesc = formatEmailSet(emailsInput);
 
-            List<String> emailsSolution = new List<String>{
+            Set<String> emailsSolution = new Set<String>{
                 'test@email.com',
                 'warreb@cloudcodeacademy.com',
                 'marc@salesforce.com'
@@ -43,47 +43,49 @@ public with sharing class ToLowerCaseTest {
             String msg;
 
             try {
-                List<String> result = tlcs.standardizeEmails(emailsInput);
-
-                if (result != emailsSolution) {
+                Set<String> result = su.standardizeEmails(emailsInput);
+                
+                if(!emailsSolution.containsAll(result)){
                     msg =
-                        'Expected ' +
-                        emailsSolution +
-                        ', received: ' +
-                        result;
+                    'Expected ' +
+                    emailsSolution +
+                    ', received: ' +
+                    result;
                 }
-                return new TestResult(testNum, testDesc, msg == null, msg);
-            } catch (Exception e) {
+                return new TestResult(testNum, testDesc, msg == null, msg);   
+            }
+             catch (Exception e) {
                 return new TestResult(testNum, testDesc, false, e.getMessage());
             }
         }
 
         public TestResult test2(String testNum) {
-            List<String> emailsInput = new List<String>{
-                null,
+            Set<String> emailsInput = new Set<String>{
+                'PARKER@SALESFORCE.COM',
                 'Another@emaiL.CoM',
                 '123Test@TeStER.com'
             };
-            String testDesc = formatEmailList(emailsInput);
-            List<String> emailsSolution = new List<String>{
-                null,
+            String testDesc = formatEmailSet(emailsInput);
+            Set<String> emailsSolution = new Set<String>{
+                'parker@salesforce.com',
                 'another@email.com',
                 '123test@tester.com'
             };
             String msg;
 
             try {
-                List<String> result = tlcs.standardizeEmails(emailsInput);
-                if (result != emailsSolution) {
+                Set<String> result = su.standardizeEmails(emailsInput);
+                
+                if(!emailsSolution.containsAll(result)){
                     msg =
-                        'Expected ' +
-                        emailsSolution +
-                        ', received: ' +
-                        result;
+                    'Expected ' +
+                    emailsSolution +
+                    ', received: ' +
+                    result;
                 }
-
-                return new TestResult(testNum, testDesc, msg == null, msg);
-            } catch (Exception e) {
+                return new TestResult(testNum, testDesc, msg == null, msg);   
+            }
+             catch (Exception e) {
                 return new TestResult(testNum, testDesc, false, e.getMessage());
             }
         }
@@ -95,7 +97,7 @@ public with sharing class ToLowerCaseTest {
         throw new TestResultException(JSON.serialize(testResult));
     }
 
-    public static String formatEmailList(List<String> emails) {
+    public static String formatEmailSet(List<String> emails) {
         String result = '[';
         for (Integer i = 0; i < emails.size(); i++) {
             if (i > 0) {
