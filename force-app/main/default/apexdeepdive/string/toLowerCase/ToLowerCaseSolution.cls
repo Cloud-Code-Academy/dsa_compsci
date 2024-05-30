@@ -1,8 +1,9 @@
-public class ToLowerCaseSolution {
-    public Set<String> standardizeEmails(Set<String> emails) {
+public class StringUtils {
+    public Set<String> standardizeEmails(List<String> emails) {
+        Set<String> uniqueEmails = new Set<String>();
         for (String email : emails) {
-            email.toLowerCase();
+            uniqueEmails.add(email.toLowerCase());
         }
-        return emails;
+        return uniqueEmails;
     }
 }
