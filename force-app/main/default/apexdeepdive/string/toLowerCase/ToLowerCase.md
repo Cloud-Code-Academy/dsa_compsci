@@ -31,7 +31,7 @@ System.debug(normalizedEmail); // Outputs: 'contact@example.com'
 ---
 ### Challenge: Using `toLowerCase()` for Email Deduplication
 
-You are tasked with cleaning up a list of email addresses in a Salesforce application. Due to various input methods and user errors, the list might contain duplicate emails with different case formats. Using `toLowerCase()`, you can standardize all email addresses to lowercase to help identify and remove duplicates.
+You are tasked with cleaning up a set of email addresses in a Salesforce application. Due to various input methods and user errors, the set might contain emails with different case formats. Using `toLowerCase()`, you can standardize all email addresses to lowercase. 
 
 **Your task:**
-Write code that processes a list of email strings, converts each to lowercase, and then deduplicates the list. You will start with a predefined list of emails that includes potential duplicates with varying cases.
+Write code that processes a set of email strings and converts each to lowercase.

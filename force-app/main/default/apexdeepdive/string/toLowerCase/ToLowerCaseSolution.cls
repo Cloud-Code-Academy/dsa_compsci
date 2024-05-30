@@ -1,5 +1,5 @@
 public class ToLowerCaseSolution {
-    public Set<String> standardizeEmails(List<String> emails) {
+    public Set<String> standardizeEmails(Set<String> emails) {
         for (String email : emails) {
             email.toLowerCase();
         }
