@@ -45,7 +45,7 @@ public with sharing class ToLowerCaseTest {
             try {
                 Set<String> result = su.standardizeEmails(emailsInput);
                 
-                if(!emailsSolution.containsAll(result)){
+                if(result == null || !emailsSolution.containsAll(result)){
                     msg =
                     'Expected ' +
                     emailsSolution +
@@ -76,7 +76,7 @@ public with sharing class ToLowerCaseTest {
             try {
                 Set<String> result = su.standardizeEmails(emailsInput);
                 
-                if(!emailsSolution.containsAll(result)){
+                if(result == null || !emailsSolution.containsAll(result)){
                     msg =
                     'Expected ' +
                     emailsSolution +
