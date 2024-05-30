@@ -28,10 +28,11 @@ public with sharing class ToLowerCaseTest {
         }
 
         public TestResult test1(String testNum) {
-            Set<String> emailsInput = new Set<String>{
+            List<String> emailsInput = new List<String>{
                 'test@email.com',
                 'WarRen@cloudcodeacademy.COM',
-                'maRc@SaleFORCE.com'
+                'maRc@SaleFORCE.com',
+                'MARC@SALESFORCE.COM'
             };
             String testDesc = formatEmailSet(emailsInput);
 
@@ -60,7 +61,7 @@ public with sharing class ToLowerCaseTest {
         }
 
         public TestResult test2(String testNum) {
-            Set<String> emailsInput = new Set<String>{
+            List<String> emailsInput = new List<String>{
                 'PARKER@SALESFORCE.COM',
                 'Another@emaiL.CoM',
                 '123Test@TeStER.com'
@@ -97,7 +98,7 @@ public with sharing class ToLowerCaseTest {
         throw new TestResultException(JSON.serialize(testResult));
     }
 
-    public static String formatEmailSet(Set<String> emails) {
+    public static String formatEmailSet(List<String> emails) {
         String result = '[';
         for (Integer i = 0; i < emails.size(); i++) {
             if (i > 0) {
