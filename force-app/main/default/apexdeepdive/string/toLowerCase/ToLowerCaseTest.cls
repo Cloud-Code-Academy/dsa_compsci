@@ -97,7 +97,7 @@ public with sharing class ToLowerCaseTest {
         throw new TestResultException(JSON.serialize(testResult));
     }
 
-    public static String formatEmailSet(List<String> emails) {
+    public static String formatEmailSet(Set<String> emails) {
         String result = '[';
         for (Integer i = 0; i < emails.size(); i++) {
             if (i > 0) {
