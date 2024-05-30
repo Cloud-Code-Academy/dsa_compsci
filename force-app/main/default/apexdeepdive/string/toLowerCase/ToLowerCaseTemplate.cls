@@ -1,7 +1,5 @@
-
 public class StringUtils {
-    public Set<String> standardizeEmails(List<String> emails) {
+    public Set<String> standardizeEmails(Set<String> emails) {
         return null;
     }
 }
- 
